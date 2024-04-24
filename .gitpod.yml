@@ -2,8 +2,8 @@ image: gitpod/workspace-full
 
 tasks:
   - init: |
-    cd deploy/docker
-    docker-compose up
+      cd deploy/docker
+      docker-compose up
 
 ports:
   - port: 8080
