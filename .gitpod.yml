@@ -1,5 +1,4 @@
-image:
-  file: .gitpod.Dockerfile
+image: appsmith/appsmith-ce
 
 ports:
   - port: 80
