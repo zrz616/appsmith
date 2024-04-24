@@ -1,7 +1,7 @@
 image: gitpod/workspace-full
 
 tasks:
-  - init: |
+  - command: |
       cd deploy/docker
       docker-compose up
 
