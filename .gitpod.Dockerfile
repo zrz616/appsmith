@@ -18,10 +18,12 @@ COPY deploy/docker/fs /
 COPY ${JAR_FILE} backend/server.jar
 COPY ${PLUGIN_JARS} backend/plugins/
 
+
 # Add client UI - Application Layer
 COPY ./app/client/build editor/
 
 # Add RTS - Application Layer
+RUN cd ./app/client/packages/rts && npm install --only=prod && npm run build
 COPY ./app/client/packages/rts/dist rts/
 
 ENV PATH /opt/appsmith/utils/node_modules/.bin:/opt/java/bin:/opt/node/bin:$PATH
